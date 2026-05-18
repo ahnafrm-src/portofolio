@@ -1,14 +1,15 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #0F0F0E;
-  --bg2: #141412;
-  --ink: #F0EDE8;
-  --ink-muted: #8A8780;
-  --accent: #E05A1A;
-  --border: #2A2926;
-  --card: #181816;
-  --nav-bg: rgba(15, 15, 14, 0.88);
+  --bg: #F2EDE5;
+  --bg2: #E8E1D7;
+  --ink: #1A1815;
+  --ink-muted: #4A4540;
+  --accent: #C94510;
+  --border: #C8C0B4;
+  --card: #EAE4DA;
+  --card-deep: #DDD5C8;
+  --nav-bg: rgba(242, 237, 229, 0.92);
 }
 
 html { scroll-behavior: smooth; }
@@ -53,7 +54,6 @@ nav {
 
 section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
 
-/* HERO — Split Screen + Bold Typography */
 #home {
   min-height: 100vh;
   display: grid;
@@ -111,7 +111,6 @@ section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
   animation: fadeUp 0.6s 0.5s ease forwards;
 }
 
-/* Glassmorphism hero-right */
 .hero-right {
   opacity: 0;
   animation: fadeUp 0.6s 0.4s ease forwards;
@@ -120,12 +119,10 @@ section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
   gap: 1px;
   background: var(--border);
   border: 1px solid var(--border);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
 
 .hero-stat {
-  background: rgba(24, 24, 22, 0.6);
+  background: var(--card);
   padding: 1.75rem 2.5rem;
   transition: background 0.2s;
   position: relative;
@@ -144,7 +141,7 @@ section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
 }
 
 .hero-stat:hover::before { transform: scaleY(1); }
-.hero-stat:hover { background: rgba(28, 28, 25, 0.9); }
+.hero-stat:hover { background: var(--card-deep); }
 
 .hero-stat-num {
   font-family: 'DM Serif Display', serif;
@@ -192,7 +189,6 @@ section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
   margin: 0 auto;
 }
 
-/* ABOUT — Split Screen */
 #about {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -227,23 +223,22 @@ section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
 
 .about-right { padding-top: 2.5rem; }
 
-/* Neumorphism stat items */
 .stat-row { display: flex; flex-direction: column; gap: 0.75rem; }
 
 .stat-item {
   padding: 1.25rem 1.5rem;
   background: var(--card);
   box-shadow:
-    4px 4px 12px rgba(0,0,0,0.5),
-    -2px -2px 8px rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.03);
+    4px 4px 10px rgba(0,0,0,0.12),
+    -2px -2px 6px rgba(255,255,255,0.6);
+  border: 1px solid var(--border);
   transition: box-shadow 0.3s;
 }
 
 .stat-item:hover {
   box-shadow:
-    inset 3px 3px 8px rgba(0,0,0,0.6),
-    inset -2px -2px 5px rgba(255,255,255,0.02);
+    inset 3px 3px 8px rgba(0,0,0,0.15),
+    inset -2px -2px 5px rgba(255,255,255,0.5);
 }
 
 .stat-number {
@@ -260,7 +255,6 @@ section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
   margin-top: 0.3rem;
 }
 
-/* SKILLS — Glassmorphism */
 .skills-header { margin-bottom: 3.5rem; }
 
 .skills-grid {
@@ -272,9 +266,7 @@ section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
 }
 
 .skill-card {
-  background: rgba(24, 24, 22, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: var(--card);
   padding: 2rem 1.75rem;
   transition: background 0.25s;
   position: relative;
@@ -285,13 +277,13 @@ section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 0%, rgba(224,90,26,0.07), transparent 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(201,69,16,0.07), transparent 70%);
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.3s;
 }
 
-.skill-card:hover { background: rgba(30, 29, 26, 0.95); }
+.skill-card:hover { background: var(--card-deep); }
 .skill-card:hover::after { opacity: 1; }
 
 .skill-category {
@@ -310,7 +302,6 @@ section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
   color: var(--ink);
 }
 
-/* PROJECTS — Glassmorphism */
 .projects-header {
   display: flex;
   justify-content: space-between;
@@ -327,9 +318,7 @@ section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
 }
 
 .project-card {
-  background: rgba(24, 24, 22, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: var(--card);
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
@@ -339,7 +328,7 @@ section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
   overflow: hidden;
 }
 
-.project-card:hover { background: rgba(28, 28, 24, 0.95); }
+.project-card:hover { background: var(--card-deep); }
 .project-card::before {
   content: '';
   position: absolute;
@@ -382,10 +371,11 @@ section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
   padding: 0.3rem 0.65rem;
   border: 1px solid var(--border);
   color: var(--ink-muted);
+  background: var(--bg2);
 }
 
 .project-card.wip {
-  background: rgba(20, 20, 18, 0.5);
+  background: var(--bg2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -401,7 +391,6 @@ section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
   text-align: center;
 }
 
-/* CONTACT — Split Screen + Neumorphism */
 #contact {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -435,16 +424,16 @@ section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
   padding: 1.25rem 1.25rem;
   background: var(--card);
   box-shadow:
-    3px 3px 10px rgba(0,0,0,0.5),
-    -1px -1px 5px rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.03);
+    3px 3px 8px rgba(0,0,0,0.12),
+    -1px -1px 4px rgba(255,255,255,0.6);
+  border: 1px solid var(--border);
   transition: all 0.25s;
 }
 
 .contact-link:hover {
   box-shadow:
-    inset 3px 3px 8px rgba(0,0,0,0.6),
-    inset -1px -1px 4px rgba(255,255,255,0.02);
+    inset 3px 3px 8px rgba(0,0,0,0.15),
+    inset -1px -1px 4px rgba(255,255,255,0.5);
   color: var(--accent);
 }
 
@@ -476,6 +465,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: var(--bg2);
 }
 
 .footer-copy {
