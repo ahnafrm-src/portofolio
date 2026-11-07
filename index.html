@@ -3,11 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ahnaf Src — Backend Developer</title>
+  <title>Ahnaf Src — Junior Web Developer</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23C94510'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23F2EDE5' font-family='serif'%3Ea%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#F2EDE5">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
-  <meta name="description" content="Ahnaf — Backend Developer dari Malang. Membangun REST API, sistem Laravel, dan integrasi antar layanan.">
-  <meta property="og:title" content="Ahnaf Src — Backend Developer">
-  <meta property="og:description" content="Backend Developer · Laravel · REST API · Malang, ID">
+  <meta name="description" content="Ahnaf — Junior Web Developer dari Malang. Membangun sistem web dengan Laravel dan REST API. Tersedia untuk bekerja mulai Maret 2027.">
+  <link rel="canonical" href="https://ahnafrm-src.github.io/portofolio/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ahnafrm-src.github.io/portofolio/">
+  <meta property="og:title" content="Ahnaf Src — Junior Web Developer">
+  <meta property="og:description" content="Junior Web Developer · Laravel · REST API · Malang, ID">
+  <!-- TODO: buat gambar 1200x630 (nama + "Junior Web Developer"), simpan sebagai og-image.png di folder yang sama, lalu hapus tanda komentar baris di bawah.
+  <meta property="og:image" content="https://ahnafrm-src.github.io/portofolio/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,9 +24,9 @@
   <nav>
     <a class="nav-logo" href="#home">ahnaf.src</a>
     <div class="nav-links">
-      <a href="#about">Tentang</a>
-      <a href="#skills">Skill</a>
       <a href="#projects">Projek</a>
+      <a href="#experience">Pengalaman</a>
+      <a href="#skills">Skill</a>
       <a href="#contact">Kontak</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -26,28 +35,30 @@
   </nav>
 
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#about" class="mobile-link">Tentang</a>
-    <a href="#skills" class="mobile-link">Skill</a>
     <a href="#projects" class="mobile-link">Projek</a>
+    <a href="#experience" class="mobile-link">Pengalaman</a>
+    <a href="#skills" class="mobile-link">Skill</a>
     <a href="#contact" class="mobile-link">Kontak</a>
   </div>
 
-  <!-- HERO — Split Screen + Bold Typography -->
+  <!-- HERO -->
   <section id="home">
     <div class="hero-left">
-      <p class="hero-label">Backend Developer · Malang, ID</p>
+      <p class="hero-label">Junior Web Developer · Malang, ID</p>
       <h1 class="hero-name">
         Ahnaf
         <em>Src.</em>
       </h1>
-      <p class="hero-desc">Saya membangun sistem yang bekerja keras di balik layar — REST API, database, dan logika server yang bisa diandalkan.</p>
+      <p class="hero-desc">Saya membangun sistem web dengan Laravel dan REST API, dari website klien yang sudah live sampai sistem informasi berbasis API.</p>
       <div class="hero-cta">
         <a href="#projects" class="btn-primary">Lihat Projek</a>
         <a href="#contact" class="btn-ghost">Hubungi Saya</a>
+        <!-- TODO: kalau CV sudah ada, taruh file sebagai cv.pdf di folder ini lalu hapus tanda komentar baris di bawah.
+        <a href="cv.pdf" class="btn-ghost" download>Unduh CV</a>
+        -->
       </div>
     </div>
 
-    <!-- Glassmorphism panel -->
     <div class="hero-right">
       <div class="hero-stat">
         <div class="hero-stat-num">Laravel</div>
@@ -58,43 +69,144 @@
         <div class="hero-stat-label">Design & Build</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num">MySQL</div>
-        <div class="hero-stat-label">Database</div>
+        <div class="hero-stat-num">React</div>
+        <div class="hero-stat-label">Sisi Frontend</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num">Open to Work</div>
-        <div class="hero-stat-label">Freelance & Kolaborasi</div>
+        <div class="hero-stat-num">Maret 2027</div>
+        <div class="hero-stat-label">Tersedia untuk Bekerja</div>
       </div>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- ABOUT — Split Screen + Neumorphism -->
-  <section id="about">
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="projects-header reveal">
+      <div>
+        <p class="section-label">Projek</p>
+        <h2 class="section-title">Yang sudah dibuat.</h2>
+      </div>
+    </div>
+    <div class="projects-grid reveal">
+
+      <article class="project-card">
+        <div class="project-main">
+          <h3 class="project-title">Website DPD NasDem Malang</h3>
+          <p class="project-desc">Website profil organisasi yang berisi berita, agenda, dan galeri, dikelola lewat panel admin. Proyek klien yang sudah live.</p>
+          <div class="project-tags">
+            <span class="tag">Laravel 11</span>
+            <span class="tag">Blade</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Manual Auth</span>
+            <span class="tag">Image Compression</span>
+            <span class="tag">Hostinger</span>
+          </div>
+          <a href="https://nasdemkotamalang.com/" target="_blank" rel="noopener" class="project-link">Lihat Website ↗</a>
+        </div>
+        <dl class="project-meta">
+          <div>
+            <dt>Masalah</dt>
+            <dd>Organisasi butuh website resmi yang kontennya bisa diperbarui lewat panel admin tanpa menyentuh kode.</dd>
+          </div>
+          <div>
+            <dt>Peran saya</dt>
+            <dd>Membangun dan mengelola website sebagai proyek klien.</dd>
+          </div>
+          <div>
+            <dt>Keputusan teknis</dt>
+            <dd>Autentikasi admin dibuat manual. Foto galeri dikompres otomatis saat diunggah supaya halaman tetap ringan dan penyimpanan hosting tidak cepat penuh.</dd>
+          </div>
+        </dl>
+      </article>
+
+      <article class="project-card">
+        <div class="project-main">
+          <h3 class="project-title">SIAS — Sistem Informasi Absensi Siswa</h3>
+          <p class="project-desc">Absensi sekolah berbasis QR Code dan validasi lokasi GPS, dengan notifikasi ke orang tua dan jurnal guru terintegrasi.</p>
+          <div class="project-tags">
+            <span class="tag">Laravel 11</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">React 19</span>
+            <span class="tag">Vite</span>
+            <span class="tag">Tailwind 4</span>
+            <span class="tag">Flutter</span>
+            <span class="tag">Multi-tenant</span>
+          </div>
+          <a href="https://sias-gilt.vercel.app" target="_blank" rel="noopener" class="project-link">Lihat Demo ↗</a>
+        </div>
+        <dl class="project-meta">
+          <div>
+            <dt>Masalah</dt>
+            <dd>Sekolah perlu mencatat kehadiran siswa dengan akurat dan memberi kabar ke orang tua.</dd>
+          </div>
+          <div>
+            <dt>Peran saya</dt>
+            <dd>Menentukan alur produk (misalnya jam masuk dan batas terlambat per sekolah), serta mengarahkan dan meninjau aspek keamanan, termasuk pencegahan SQL injection. Dikembangkan dengan bantuan AI.</dd>
+          </div>
+          <div>
+            <dt>Keputusan teknis</dt>
+            <dd>Arsitektur multi-tenant supaya satu sistem melayani banyak sekolah. Kehadiran divalidasi dengan lokasi GPS.</dd>
+          </div>
+        </dl>
+      </article>
+
+      <article class="project-card">
+        <div class="project-main">
+          <h3 class="project-title">SiWarga — Sistem Informasi Warga RT</h3>
+          <p class="project-desc">REST API untuk pendataan warga RT, dengan klien web React dan ekspor data ke PDF dan Excel.</p>
+          <div class="project-tags">
+            <span class="tag">Laravel</span>
+            <span class="tag">React</span>
+            <span class="tag">REST API</span>
+            <span class="tag">DomPDF</span>
+            <span class="tag">Maatwebsite Excel</span>
+          </div>
+          <span class="project-status">Demo menyusul</span>
+        </div>
+        <dl class="project-meta">
+          <div>
+            <dt>Masalah</dt>
+            <dd>Data warga RT perlu terkumpul dalam satu sistem dan hanya bisa diakses oleh yang berhak.</dd>
+          </div>
+          <div>
+            <dt>Peran saya</dt>
+            <dd>Merancang dan membangun REST API dengan Laravel.</dd>
+          </div>
+          <div>
+            <dt>Keputusan teknis</dt>
+            <dd>Kontrol akses berjenjang: data anggota keluarga hanya bisa dibuka lewat kepala keluarga terlebih dahulu. Ekspor data memakai DomPDF dan Maatwebsite Excel.</dd>
+          </div>
+        </dl>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ABOUT + EXPERIENCE -->
+  <section id="experience">
     <div class="about-left reveal">
-      <p class="section-label">Tentang Saya</p>
-      <h2 class="section-title">Lebih tertarik cara kerja sistem daripada tampilannya.</h2>
-      <p class="about-text">Saya developer dengan latar RPL yang fokus di backend — REST API, database, dan integrasi antar sistem. Kode yang baik bukan yang paling panjang, tapi yang mudah dipahami, dirawat, dan tidak mudah rusak.</p>
-      <p class="about-text">Saat ini aktif membangun keahlian di Web API, cloud, real-time systems, dan microservices.</p>
+      <p class="section-label">Tentang & Pengalaman</p>
+      <h2 class="section-title">Dari API sampai tampilan, dan bagaimana halaman ditemukan orang.</h2>
+      <p class="about-text">Siswa SMK jurusan Rekayasa Perangkat Lunak di Malang, lulus Maret 2027. Fokus saya Laravel dan REST API, dengan sisi frontend memakai React.</p>
+      <p class="about-text">Saat magang saya mengelola website berita dan belajar SEO, jadi saya terbiasa memikirkan bagaimana sebuah halaman ditemukan orang, bukan hanya bagaimana ia dibangun.</p>
     </div>
     <div class="about-right reveal">
       <div class="stat-row">
         <div class="stat-item">
-          <div class="stat-number">Laravel 11</div>
-          <div class="stat-desc">Framework utama backend development</div>
+          <div class="stat-number">Web Developer · Proyek Klien</div>
+          <div class="stat-desc">DPD NasDem Malang — Laravel 11, panel admin, website live</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">REST API</div>
-          <div class="stat-desc">Design, build, integrate dari scratch</div>
+          <div class="stat-number">Content & SEO Intern</div>
+          <div class="stat-desc">infomalang.com · Januari – Juni 2026 (6 bulan). Mengelola dan menulis berita website, riset keyword, menulis press release anggota DPRD Kota Malang</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">MySQL · MongoDB</div>
-          <div class="stat-desc">Relational & non-relational database</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">Git · Linux</div>
-          <div class="stat-desc">Version control & server environment</div>
+          <div class="stat-number">SMK · Rekayasa Perangkat Lunak</div>
+          <div class="stat-desc">Malang — lulus Maret 2027</div>
         </div>
       </div>
     </div>
@@ -102,7 +214,7 @@
 
   <div class="divider"></div>
 
-  <!-- SKILLS — Glassmorphism -->
+  <!-- SKILLS -->
   <section id="skills">
     <div class="skills-header reveal">
       <p class="section-label">Keahlian</p>
@@ -122,27 +234,26 @@
         <p class="skill-category">Database</p>
         <div class="skill-items">
           <span class="skill-item">MySQL</span>
-          <span class="skill-item">MongoDB</span>
-          <span class="skill-item">Query Builder</span>
           <span class="skill-item">Eloquent ORM</span>
+          <span class="skill-item">Query Builder</span>
         </div>
       </div>
       <div class="skill-card">
-        <p class="skill-category">Integrasi</p>
+        <p class="skill-category">Frontend</p>
         <div class="skill-items">
-          <span class="skill-item">OAuth 2.0</span>
-          <span class="skill-item">Guzzle HTTP</span>
+          <span class="skill-item">React</span>
+          <span class="skill-item">Tailwind CSS</span>
+          <span class="skill-item">HTML & CSS</span>
+          <span class="skill-item">Flutter</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <p class="skill-category">Integrasi & Tools</p>
+        <div class="skill-items">
           <span class="skill-item">Telegram Bot API</span>
-          <span class="skill-item">Google APIs</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <p class="skill-category">Tools & Infra</p>
-        <div class="skill-items">
+          <span class="skill-item">Guzzle HTTP</span>
+          <span class="skill-item">Google Apps Script (eksperimen)</span>
           <span class="skill-item">Git</span>
-          <span class="skill-item">Linux / Bash</span>
-          <span class="skill-item">Shared Hosting</span>
-          <span class="skill-item">VS Code</span>
         </div>
       </div>
     </div>
@@ -150,86 +261,24 @@
 
   <div class="divider"></div>
 
-  <!-- PROJECTS — Glassmorphism -->
-  <section id="projects">
-    <div class="projects-header reveal">
-      <div>
-        <p class="section-label">Projek</p>
-        <h2 class="section-title">Yang sudah dibuat.</h2>
-      </div>
-    </div>
-    <div class="projects-grid reveal">
-
-      <div class="project-card">
-        <h3 class="project-title">Website DPD NasDem Malang</h3>
-        <p class="project-desc">Proyek klien. Website profil organisasi yang dibangun dan dikelola dengan Laravel 11 + Blade: berita, agenda, dan galeri dikelola lewat panel admin dengan autentikasi manual. Upload foto galeri dikompres otomatis supaya halaman tetap ringan dan penyimpanan hosting tidak cepat penuh.</p>
-        <div class="project-tags">
-          <span class="tag">Laravel 11</span>
-          <span class="tag">Blade</span>
-          <span class="tag">MySQL</span>
-          <span class="tag">Manual Auth</span>
-          <span class="tag">Image Compression</span>
-          <span class="tag">Hostinger</span>
-        </div>
-        <a href="https://nasdemkotamalang.com/" target="_blank" rel="noopener" class="project-link">Lihat Website ↗</a>
-      </div>
-
-      <div class="project-card">
-        <h3 class="project-title">SIAS — Sistem Informasi Absensi Siswa</h3>
-        <p class="project-desc">Absensi sekolah berbasis QR Code dan validasi lokasi GPS, dengan notifikasi ke orang tua, jurnal guru terintegrasi, dan arsitektur multi-tenant untuk banyak sekolah. Dikembangkan dengan bantuan AI. Peran saya: menentukan alur produk (misalnya pengaturan jam masuk dan batas terlambat per sekolah) serta mengarahkan dan meninjau aspek keamanan, termasuk pencegahan SQL injection.</p>
-        <div class="project-tags">
-          <span class="tag">Laravel 11</span>
-          <span class="tag">MySQL</span>
-          <span class="tag">React 19</span>
-          <span class="tag">Vite</span>
-          <span class="tag">Tailwind 4</span>
-          <span class="tag">Flutter</span>
-          <span class="tag">Multi-tenant</span>
-        </div>
-        <a href="https://sias-gilt.vercel.app" target="_blank" rel="noopener" class="project-link">Lihat Demo ↗</a>
-      </div>
-
-      <div class="project-card">
-        <h3 class="project-title">SiWarga — Sistem Informasi Warga RT</h3>
-        <p class="project-desc">REST API untuk pendataan warga RT dengan kontrol akses berjenjang: data anggota keluarga hanya bisa dibuka lewat kepala keluarga terlebih dahulu. Dilengkapi ekspor data ke PDF dan Excel.</p>
-        <div class="project-tags">
-          <span class="tag">Laravel</span>
-          <span class="tag">React</span>
-          <span class="tag">REST API</span>
-          <span class="tag">DomPDF</span>
-          <span class="tag">Maatwebsite Excel</span>
-        </div>
-      </div>
-
-      <div class="project-card wip">
-        <div>
-          <p class="wip-text">PROJECT BERIKUTNYA<br>DALAM PENGERJAAN</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- CONTACT — Split Screen + Neumorphism -->
+  <!-- CONTACT -->
   <section id="contact">
     <div class="reveal">
       <p class="section-label">Kontak</p>
-      <h2 class="contact-title">Ada projek atau diskusi? Hubungi saya.</h2>
-      <p class="contact-sub">Terbuka untuk kolaborasi, freelance, atau sekadar ngobrol soal backend dan sistem.</p>
+      <h2 class="contact-title">Punya lowongan atau projek? Hubungi saya.</h2>
+      <p class="contact-sub">Terbuka untuk posisi junior web developer mulai Maret 2027. Proyek freelance terbatas juga bisa didiskusikan.</p>
     </div>
     <div class="contact-links reveal">
 
-      <a href="mailto:ahnaf@email.com" class="contact-link">
+      <a href="mailto:ahnaf.src@gmail.com" class="contact-link">
         <div>
           <span class="link-label">Email</span>
-          <span class="link-value">ahnaf@email.com</span>
+          <span class="link-value">ahnaf.src@gmail.com</span>
         </div>
         <span class="link-arrow">↗</span>
       </a>
 
-      <a href="tel:+6281232960409" class="contact-link">
+      <a href="https://wa.me/6281232960409" target="_blank" rel="noopener" class="contact-link">
         <div>
           <span class="link-label">WhatsApp</span>
           <span class="link-value">+62 812-3296-0409</span>
@@ -248,17 +297,6 @@
         <span class="link-arrow">↗</span>
       </a>
 
-      <a href="https://www.instagram.com/ahnafrm.png" target="_blank" rel="noopener" class="contact-link">
-        <div style="display:flex;align-items:center;gap:0.75rem;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          <div>
-            <span class="link-label">Instagram</span>
-            <span class="link-value">ahnafrm.png</span>
-          </div>
-        </div>
-        <span class="link-arrow">↗</span>
-      </a>
-
       <div class="contact-link" style="cursor:default;">
         <div>
           <span class="link-label">Lokasi</span>
@@ -271,7 +309,7 @@
 
   <footer>
     <span class="footer-copy">© 2026 Ahnaf Src</span>
-    <span class="footer-copy">Backend Developer · Malang, ID</span>
+    <span class="footer-copy">Junior Web Developer · Malang, ID</span>
   </footer>
 
   <script src="script.js"></script>
