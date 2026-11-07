@@ -52,7 +52,7 @@ nav {
 }
 .nav-links a:hover { color: var(--ink); }
 
-section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
+section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; scroll-margin-top: 4rem; }
 
 #home {
   min-height: 100vh;
@@ -106,7 +106,7 @@ section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
 
 .hero-cta {
   margin-top: 3rem;
-  display: flex; gap: 1rem;
+  display: flex; flex-wrap: wrap; gap: 1rem;
   opacity: 0;
   animation: fadeUp 0.6s 0.5s ease forwards;
 }
@@ -189,7 +189,7 @@ section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
   margin: 0 auto;
 }
 
-#about {
+#experience {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
@@ -245,32 +245,18 @@ section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
   font-family: 'DM Serif Display', serif;
   font-size: 1.4rem;
   color: var(--ink);
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .stat-desc {
   font-family: 'DM Mono', monospace;
   font-size: 0.72rem;
   color: var(--ink-muted);
-  margin-top: 0.3rem;
+  margin-top: 0.4rem;
+  line-height: 1.6;
 }
 
 .skills-header { margin-bottom: 3.5rem; }
-
-.hero-desc-en {
-  display: block;
-  margin-top: 0.5rem;
-  font-size: 0.875rem;
-  font-style: italic;
-  color: var(--ink-muted);
-  opacity: 0.75;
-}
-
-.about-text-en {
-  font-size: 0.9rem !important;
-  opacity: 0.7;
-  margin-top: 1.25rem !important;
-}
 
 .skills-grid {
   display: grid;
@@ -326,7 +312,7 @@ section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 1px;
   background: var(--border);
   border: 1px solid var(--border);
@@ -335,9 +321,9 @@ section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
 .project-card {
   background: var(--card);
   padding: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 3rem;
   transition: background 0.2s;
   position: relative;
   overflow: hidden;
@@ -356,6 +342,12 @@ section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
 }
 .project-card:hover::before { transform: scaleX(1); }
 
+.project-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .project-title {
   font-family: 'DM Serif Display', serif;
   font-size: 1.5rem;
@@ -367,7 +359,6 @@ section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
   font-weight: 300;
   color: var(--ink-muted);
   line-height: 1.65;
-  flex: 1;
 }
 
 .project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
@@ -395,22 +386,36 @@ section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
 }
 .project-link:hover { opacity: 0.7; }
 
-.project-card.wip {
-  grid-column: 1 / -1;
-  background: var(--bg2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 200px;
+.project-status {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+  margin-top: 0.25rem;
 }
 
-.wip-text {
+.project-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-left: 3rem;
+  border-left: 1px solid var(--border);
+}
+
+.project-meta dt {
   font-family: 'DM Mono', monospace;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.project-meta dd {
+  font-size: 0.9rem;
+  font-weight: 300;
   color: var(--ink-muted);
-  letter-spacing: 0.1em;
-  line-height: 2;
-  text-align: center;
+  line-height: 1.65;
 }
 
 #contact {
@@ -552,6 +557,11 @@ footer {
 .mobile-menu a:last-child { border-bottom: none; }
 .mobile-menu a:hover { color: var(--ink); }
 
+@media (max-width: 900px) {
+  .project-card { grid-template-columns: 1fr; gap: 2rem; }
+  .project-meta { padding-left: 0; border-left: none; border-top: 1px solid var(--border); padding-top: 1.5rem; }
+}
+
 @media (max-width: 768px) {
   nav { padding: 1.25rem 1.5rem; }
   .nav-links { display: none; }
@@ -559,9 +569,8 @@ footer {
   section { padding: 5rem 1.5rem; }
   #home { grid-template-columns: 1fr; min-height: auto; padding-bottom: 4rem; }
   .hero-right { margin-top: 2rem; }
-  #about, #contact { grid-template-columns: 1fr; gap: 3rem; }
+  #experience, #contact { grid-template-columns: 1fr; gap: 3rem; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
-  .projects-grid { grid-template-columns: 1fr; }
-  .project-card.wip { grid-column: 1; }
+  .project-card { padding: 1.75rem; }
   footer { padding: 1.5rem; flex-direction: column; gap: 0.75rem; text-align: center; }
 }
